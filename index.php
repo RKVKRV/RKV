@@ -1,4 +1,5 @@
 <?php
+//rwevewverveV
 $cat_1 = new stdClass();
 $cat_1->name = 'Бытовая техника';
 $cat_1->url = 'url_1';
@@ -59,6 +60,9 @@ function getCategories($categories) {
 }
 
 getCategories($categories);
+
+
+
 
 ?>
 
