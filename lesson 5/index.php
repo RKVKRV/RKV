@@ -88,9 +88,55 @@ function getCategories($categories) {
         echo "</ul>";
     }
 }
-
 getCategories($categories);
-?>
-</body>
-</html>
 
+echo "<br>","<br>","<br>";
+
+/*Создайте функцию MainMenu() с двумя аргументами.
+Первый аргумент $menu - в него будет передаваться массив, содержащий структуру меню
+Второй аргумент $type со значением по умолчанию равным true.
+Данный параметр указывает, каким образом будет отрисовано меню -
+вертикально или горизонтально.
+Измените код таким образом, чтобы меню отрисовывалось в зависимости от
+входящего параметра $type - либо вертикально, либо горизонтально
+Отрисуйте оба таких меню.
+*/
+$leftMenu = array(
+    'home'=>'index.php',
+    'about'=>'about.php',
+    'contacts'=>'contact.php',
+    'table'=>'table.php',
+    'calc'=>'calc.php'
+);
+
+MainMenu($leftMenu,true);
+MainMenu($leftMenu,false);
+
+function MainMenu($leftmenu,$type){	?>
+<style>
+    ul.MainMenu li {
+        list-style-type: none; /* Убираем маркеры */
+    }
+    ul.headerVert {
+        margin: 0; /* Обнуляем значение отступов */
+        padding: 4px; /* Значение полей */
+    }
+    ul.headerVert li {
+        display: inline; /* Отображать как строчный элемент */
+        margin-right: 5px; /* Отступ слева */
+        border: 1px solid #000; /* Рамка вокруг текста */
+        padding: 3px; /* Поля вокруг текста */
+    }
+</style>
+<ul class="MainMenu <?php if($type==true){?> headerVert  <?php }  ?>">
+    <li><a href='<?php $leftmenu['home']?>'>Домой</a></li>
+    <li><a href='<?php $leftmenu['about']?>'>Подробнее</a></li>
+    <li><a href='<?php $leftmenu['contacts']?>'>Контакты</a></li>
+    <li><a href='<?php $leftmenu['table']?>'>Таблица</a></li>
+    <li><a href='<?php $leftmenu['calc']?>'>Калькулятор</a></li><br>
+</ul>
+<?php
+
+}
+
+?>
