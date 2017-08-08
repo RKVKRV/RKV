@@ -13,7 +13,8 @@
                 Logo
             </div>
             <div class = "menu_site">
-                <?php require_once("C:\OpenServer\domains\RKV\lesson 5\menu.php")?>
+                <?php require_once("_functions/menu.php")?>
+                <?php echo ($pages) ?>
             </div>
         </header>
         <aside class="product_categories">

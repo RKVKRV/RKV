@@ -26,7 +26,7 @@ function MainMenu($leftmenu,$type){	?>
     ul.headerVert li {
         display: inline; /* Отображать как строчный элемент */
         margin-right: 5px; /* Отступ слева */
-        border: 1px solid #000; /* Рамка вокруг текста */
+
         padding: 3px; /* Поля вокруг текста */
     }
 </style>
