@@ -1,3 +1,4 @@
+<?php require_once 'html/functions.php' ?>
 <!DOCTYPE >
 <html>
 <head>
@@ -13,12 +14,14 @@
                 Logo
             </div>
             <div class = "menu_site">
-                <?php require_once("_functions/menu.php")?>
-                <?php echo ($pages) ?>
+                <?php viewMenu($pages) ?>
             </div>
         </header>
         <aside class="product_categories">
-
+            <?php
+            $categories_tree = makeTree($categories);
+            viewCategories($categories_tree);
+            ?>
         </aside>
         <div class="content">
 
